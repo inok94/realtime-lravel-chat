@@ -1,9 +1,9 @@
-<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Document</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
@@ -35,6 +35,8 @@
             </ul>
             <input v-model="message" @keypress.enter="send"
                    type="text" class="form-control" placeholder="Type your message">
+            <br>
+            <a href='' class="btn btn-warning btn-sm" @click.prevent='deleteSession'>Delete Chats</a>
         </div>
     </div>
 </div>
